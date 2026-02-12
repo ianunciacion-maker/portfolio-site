@@ -16,7 +16,7 @@ const floatingShapes = [
 
 export function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-b from-bg-primary via-bg-primary to-bg-secondary dark:from-[#0a0a0a] dark:via-[#0f0f0f] dark:to-[#0a0a0a]">
+    <section className="relative pt-24 sm:pt-32 pb-16 sm:pb-20 overflow-hidden bg-gradient-to-b from-bg-primary via-bg-primary to-bg-secondary dark:from-[#0a0a0a] dark:via-[#0f0f0f] dark:to-[#0a0a0a]">
       {/* Particle Background */}
       <ParticleField />
 

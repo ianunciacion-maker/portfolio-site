@@ -8,6 +8,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <div className="h-16 sm:h-24 bg-gradient-to-b from-bg-primary to-bg-secondary/30 dark:from-[#0a0a0a] dark:to-bg-secondary/30" />
       <About />
       <FeaturedProjects />
       <Skills />
