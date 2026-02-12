@@ -11,10 +11,11 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     ],
   },
   {
-    name: "AI & Voice",
+    name: "AI, Prompts & Voice",
     skills: [
       { name: "Claude Code" },
       { name: "OpenAI" },
+      { name: "Prompt Engineering" },
       { name: "ElevenLabs" },
       { name: "Antigravity" },
       { name: "OpenClaw" },

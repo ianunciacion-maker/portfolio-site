@@ -4,7 +4,7 @@ export const SITE_CONFIG = {
   name: "Ian Anunciacion",
   title: "Ian Anunciacion | Automations Expert & Vibe Coder",
   description:
-    "Results-driven Automations Expert and Vibe Coder with 13+ years of experience. I build end-to-end automation systems and modern web applications that help businesses scale.",
+    "Results-driven Automations Expert, Prompt Engineer, and Vibe Coder with 13+ years of experience. I build end-to-end automation systems, craft production-grade AI prompts, and develop modern web applications that help businesses scale.",
   url: "https://iananunciacion.com",
   ogImage: "/og-image.png",
 } as const;

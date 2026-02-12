@@ -16,6 +16,7 @@ const stats = [
 const specializations = [
   "End-to-end workflow automation",
   "AI-powered bots & voice systems",
+  "Prompt engineering & AI orchestration",
   "Full-stack web applications",
   "Process redesign & efficiency",
 ];
@@ -25,7 +26,7 @@ const timeline = [
     year: "2023 - Present",
     title: "Vibe Coder & AI Builder",
     description:
-      "Building end-to-end automation systems and modern web applications using Claude Code, n8n, Next.js, and AI tools. Turning manual bottlenecks into seamless, hands-off systems.",
+      "Building end-to-end automation systems and modern web applications using Claude Code, n8n, Next.js, and AI tools. Crafting production-grade prompts and turning manual bottlenecks into seamless, hands-off systems.",
   },
   {
     year: "2022 - 2023",
@@ -68,7 +69,8 @@ export function About() {
                   professional experience spanning operations, marketing, and workflow automation.
                   Self-taught in platforms like n8n, Claude Code, and GoHighLevel, with a proven
                   ability to rapidly learn any tool and turn manual, repetitive processes into
-                  streamlined automated systems.
+                  streamlined automated systems. Also a skilled prompt engineer — I design and
+                  refine AI prompts that power reliable, production-grade outputs.
                 </p>
                 <p className="mt-4 text-text-secondary leading-relaxed">
                   Known for identifying inefficiencies early and building end-to-end solutions

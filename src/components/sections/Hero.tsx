@@ -1,8 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "motion/react";
-import { ArrowDown, Sparkles } from "lucide-react";
+import { useRef, useCallback } from "react";
+import {
+  motion,
+  useMotionValue,
+  useSpring,
+  useReducedMotion,
+} from "motion/react";
+import { ArrowDown, Sparkles, Download } from "lucide-react";
 import { AnimatedText } from "@/components/shared/AnimatedText";
 
 import { Button } from "@/components/shared/Button";
@@ -15,6 +21,30 @@ const floatingShapes = [
 ];
 
 export function Hero() {
+  const prefersReducedMotion = useReducedMotion();
+  const btnRef = useRef<HTMLAnchorElement>(null);
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+  const springX = useSpring(x, { stiffness: 150, damping: 15 });
+  const springY = useSpring(y, { stiffness: 150, damping: 15 });
+
+  const handleMouseMove = useCallback(
+    (e: React.MouseEvent) => {
+      if (prefersReducedMotion || !btnRef.current) return;
+      const rect = btnRef.current.getBoundingClientRect();
+      const cx = rect.left + rect.width / 2;
+      const cy = rect.top + rect.height / 2;
+      x.set((e.clientX - cx) * 0.15);
+      y.set((e.clientY - cy) * 0.15);
+    },
+    [prefersReducedMotion, x, y],
+  );
+
+  const handleMouseLeave = useCallback(() => {
+    x.set(0);
+    y.set(0);
+  }, [x, y]);
+
   return (
     <section className="relative pt-24 sm:pt-32 pb-16 sm:pb-20 overflow-hidden bg-gradient-to-b from-bg-primary via-bg-primary to-bg-secondary dark:from-[#0a0a0a] dark:via-[#0f0f0f] dark:to-[#0a0a0a]">
       {/* Floating Glass Shapes */}
@@ -50,7 +80,7 @@ export function Hero() {
       <div className="relative z-10 mx-auto max-w-6xl px-6 w-full">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           {/* Text Content — Left */}
-          <div>
+          <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
             {/* Badge */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -75,10 +105,10 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
-              className="mt-4 max-w-lg text-lg text-text-secondary"
+              className="mt-4 max-w-lg text-lg text-text-secondary mx-auto lg:mx-0"
             >
               13+ years of transforming manual processes into automated systems.
-              I build web apps, AI bots, and automation workflows that help businesses scale.
+              I build web apps, AI bots, and precision-crafted prompts that help businesses scale.
             </motion.p>
 
             {/* CTAs */}
@@ -86,7 +116,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.1 }}
-              className="mt-8 flex flex-col gap-4 sm:flex-row"
+              className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start"
             >
               <Button href="#projects" size="lg">
                 View My Work
@@ -102,7 +132,7 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.9, x: 30 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-            className="flex justify-center lg:justify-end"
+            className="flex flex-col items-center lg:items-end"
           >
             <div className="relative">
               {/* Animated glow ring behind image */}
@@ -207,6 +237,115 @@ export function Hero() {
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
               />
             </div>
+
+            {/* Animated Download CV Button */}
+            <motion.a
+              ref={btnRef}
+              href="https://drive.google.com/file/d/1_1q0vHRzPcpLkIeMao3dfJRBoqFGmH0G/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.4 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onMouseMove={handleMouseMove}
+              onMouseLeave={handleMouseLeave}
+              style={{ x: springX, y: springY }}
+              className="relative mt-6 inline-flex items-center gap-2.5 rounded-full px-7 py-3 text-sm font-medium cursor-pointer overflow-hidden"
+            >
+              {/* Layer 1: Rotating conic gradient border */}
+              <span
+                className="pointer-events-none absolute inset-0 rounded-full"
+                style={{
+                  padding: "1.5px",
+                  mask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                  maskComposite: "exclude",
+                  WebkitMaskComposite: "xor",
+                }}
+              >
+                <motion.span
+                  className="block h-full w-full rounded-full"
+                  style={{
+                    background:
+                      "conic-gradient(from 0deg, var(--accent-secondary), var(--accent-primary), var(--accent-secondary))",
+                  }}
+                  animate={
+                    prefersReducedMotion
+                      ? {}
+                      : { rotate: 360 }
+                  }
+                  transition={
+                    prefersReducedMotion
+                      ? undefined
+                      : { duration: 3, repeat: Infinity, ease: "linear" }
+                  }
+                />
+              </span>
+
+              {/* Layer 2: Glass background fill */}
+              <span className="pointer-events-none absolute inset-[1.5px] rounded-full bg-[var(--glass-bg)] backdrop-blur-xl" />
+
+              {/* Layer 3: Ambient glow pulse */}
+              <motion.span
+                className="pointer-events-none absolute -inset-2 -z-10 rounded-full blur-xl"
+                style={{
+                  background:
+                    "linear-gradient(135deg, var(--accent-secondary), var(--accent-primary))",
+                }}
+                animate={
+                  prefersReducedMotion
+                    ? { opacity: 0.15 }
+                    : { opacity: [0.1, 0.3, 0.1] }
+                }
+                transition={
+                  prefersReducedMotion
+                    ? undefined
+                    : { duration: 3, repeat: Infinity, ease: "easeInOut" }
+                }
+              />
+
+              {/* Layer 4: Shimmer scan line */}
+              {!prefersReducedMotion && (
+                <motion.span
+                  className="pointer-events-none absolute inset-0 rounded-full"
+                  style={{
+                    background:
+                      "linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.1) 45%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.1) 55%, transparent 60%)",
+                    backgroundSize: "200% 100%",
+                  }}
+                  animate={{ backgroundPosition: ["200% 0", "-200% 0"] }}
+                  transition={{
+                    duration: 2.5,
+                    repeat: Infinity,
+                    repeatDelay: 3,
+                    ease: "easeInOut",
+                  }}
+                />
+              )}
+
+              {/* Layer 5: Animated download icon */}
+              <motion.span
+                className="relative z-10"
+                animate={
+                  prefersReducedMotion
+                    ? {}
+                    : { y: [0, 2, 0] }
+                }
+                transition={
+                  prefersReducedMotion
+                    ? undefined
+                    : { duration: 1.5, repeat: Infinity, ease: "easeInOut" }
+                }
+              >
+                <Download className="h-4 w-4 text-[var(--text-primary)]" />
+              </motion.span>
+
+              {/* Layer 6: Gradient text */}
+              <span className="relative z-10 gradient-text font-semibold">
+                Download CV
+              </span>
+            </motion.a>
           </motion.div>
         </div>
 

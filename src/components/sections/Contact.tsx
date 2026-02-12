@@ -92,9 +92,9 @@ export function Contact() {
                   Get In Touch
                 </h3>
                 <p className="text-sm text-text-secondary leading-relaxed mb-8">
-                  Whether you need workflow automation, a custom web application, or an
-                  AI-powered bot — I can help you streamline your operations and scale
-                  your business.
+                  Whether you need workflow automation, a custom web application, expertly
+                  crafted AI prompts, or an AI-powered bot — I can help you streamline
+                  your operations and scale your business.
                 </p>
 
                 <div className="space-y-4">
