@@ -79,7 +79,7 @@ Built with **Next.js 16** and **React 19** on the app router. Supabase handles a
       "/images/projects/aia-lead-extractor-5.png",
     ],
     featured: true,
-    order: 2,
+    order: 3,
   },
   {
     slug: "white-lotus",
@@ -113,7 +113,7 @@ Built with **React** and **Vite** for fast dev cycles and optimized builds. **Re
       "/images/projects/white-lotus-5.png",
     ],
     featured: true,
-    order: 3,
+    order: 4,
   },
   {
     slug: "aiauto",
@@ -146,7 +146,7 @@ Built with **vanilla JavaScript** and **Node.js** for maximum performance and ze
       "/images/projects/aiauto-5.png",
     ],
     featured: false,
-    order: 4,
+    order: 5,
   },
   {
     slug: "hr-bot-aia",
@@ -180,7 +180,7 @@ Built with **React** and **Vite** for a snappy single-page experience. The chat 
       "/images/projects/hr-bot-aia-5.png",
     ],
     featured: true,
-    order: 5,
+    order: 6,
   },
   {
     slug: "aia-sales-bot",
@@ -214,7 +214,7 @@ The entire system is orchestrated through **n8n workflows** — no traditional a
       "/images/projects/aia-sales-bot-5.png",
     ],
     featured: true,
-    order: 6,
+    order: 7,
   },
   {
     slug: "rp-partner-website",
@@ -248,7 +248,7 @@ Built with **Next.js 16** and **React 19** on the app router. Remotion handles p
       "/images/projects/rp-partner-website-5.png",
     ],
     featured: true,
-    order: 7,
+    order: 8,
   },
   {
     slug: "autonoiq-website",
@@ -282,7 +282,7 @@ Built with **vanilla JavaScript** — no framework overhead, just clean modular 
       "/images/projects/autonoiq-website-5.png",
     ],
     featured: false,
-    order: 8,
+    order: 9,
   },
   {
     slug: "n8n-tuknang",
@@ -316,7 +316,53 @@ Built entirely in **n8n** with no external application code. The batch generatio
       "/images/projects/n8n-tuknang-5.png",
     ],
     featured: false,
-    order: 9,
+    order: 10,
+  },
+  {
+    slug: "smilevoice-dental",
+    title: "SmileVoice",
+    shortDescription:
+      "AI voice assistant for a dental clinic that handles appointment booking, service inquiries, and patient intake over phone and web — fully conversational, zero hold time.",
+    fullDescription: `Dental offices lose patients every day to unanswered calls and clunky online forms. SmileVoice is an AI-powered voice assistant built for Bright Smile Dental that answers every call, understands what the patient needs, checks real-time availability, and books the appointment — all in a natural, human-sounding conversation. It also lives as a widget on their website for patients who prefer to click instead of call.
+
+### Key Features
+
+- **Conversational Booking** — Patients describe what they need in plain language (cleaning, emergency, cosmetic consultation) and the assistant maps it to the right service, provider, and time slot
+- **Phone + Web Widget** — Handles inbound calls via Twilio and embeds as a floating voice widget on the clinic website, delivering the same experience across both channels
+- **Real-Time Availability** — Queries the clinic's scheduling system live during the conversation, offering only open slots and respecting provider-specific calendars
+- **Smart Intake Collection** — Gathers new patient info (insurance, allergies, medical history flags) conversationally and syncs it to the practice management system before the visit
+- **SMS Confirmations & Reminders** — Sends booking confirmations instantly via Twilio SMS, plus automated reminders 24 hours before the appointment
+- **Bilingual Support** — Full conversational flow in English and Spanish, with automatic language detection from the first few seconds of speech
+
+### Technical Highlights
+
+The voice pipeline starts with **Twilio** receiving the inbound call and streaming audio to a WebSocket server. **Deepgram** handles real-time speech-to-text with medical vocabulary boosting for dental terminology. The transcript feeds into **OpenAI GPT-4** for intent extraction, entity recognition (service type, urgency, preferred date/time), and response generation. **ElevenLabs** converts the AI response back to natural-sounding speech and streams it to the caller with sub-second latency.
+
+The clinic website is built on **Next.js** and **React** with **Tailwind CSS** and uses **Supabase** for the scheduling database, patient records, and auth. The voice widget is a custom React component that connects to the same AI pipeline via WebSocket, giving web visitors an identical conversational booking experience. An admin dashboard lets the front desk view upcoming AI-booked appointments, listen to call recordings, and override bookings when needed.
+
+**Built with:** Next.js, React, Tailwind CSS, Supabase, OpenAI, ElevenLabs, Twilio, Deepgram`,
+    category: "ai-bots",
+    categoryLabel: "AI & Bots",
+    techStack: [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "Supabase",
+      "OpenAI",
+      "ElevenLabs",
+      "Twilio",
+      "Deepgram",
+    ],
+    image: "/images/projects/smilevoice-dental.png",
+    screenshots: [
+      "/images/projects/smilevoice-dental-1.png",
+      "/images/projects/smilevoice-dental-2.png",
+      "/images/projects/smilevoice-dental-3.png",
+      "/images/projects/smilevoice-dental-4.png",
+      "/images/projects/smilevoice-dental-5.png",
+    ],
+    featured: true,
+    order: 2,
   },
 ];
 
