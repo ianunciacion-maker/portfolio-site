@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion } from "motion/react";
 import { ArrowDown, Sparkles } from "lucide-react";
 import { AnimatedText } from "@/components/shared/AnimatedText";
-import { ParticleField } from "@/components/shared/ParticleField";
+
 import { Button } from "@/components/shared/Button";
 
 const floatingShapes = [
@@ -17,9 +17,6 @@ const floatingShapes = [
 export function Hero() {
   return (
     <section className="relative pt-24 sm:pt-32 pb-16 sm:pb-20 overflow-hidden bg-gradient-to-b from-bg-primary via-bg-primary to-bg-secondary dark:from-[#0a0a0a] dark:via-[#0f0f0f] dark:to-[#0a0a0a]">
-      {/* Particle Background */}
-      <ParticleField />
-
       {/* Floating Glass Shapes */}
       {floatingShapes.map((shape, i) => (
         <motion.div

@@ -22,16 +22,10 @@ const specializations = [
 
 const timeline = [
   {
-    year: "2011 - 2019",
-    title: "BPO Leadership",
+    year: "2023 - Present",
+    title: "Vibe Coder & AI Builder",
     description:
-      "Progressed from call center agent to training manager across US telecom accounts. Built the operational discipline and process thinking that became the foundation for everything after.",
-  },
-  {
-    year: "2019 - 2022",
-    title: "Operations & Admin",
-    description:
-      "Executive assistant and operations manager at ConvrtX. Redesigned evaluation and reporting processes, driving 20% efficiency gains. This is where I started asking: how can this be automated?",
+      "Building end-to-end automation systems and modern web applications using Claude Code, n8n, Next.js, and AI tools. Turning manual bottlenecks into seamless, hands-off systems.",
   },
   {
     year: "2022 - 2023",
@@ -40,10 +34,16 @@ const timeline = [
       "Architected full client onboarding systems at Drivetechnolgy using GoHighLevel, n8n, and AI-powered workflows. Embedded automation at every stage of the marketing funnel.",
   },
   {
-    year: "2023 - Present",
-    title: "Vibe Coder & AI Builder",
+    year: "2019 - 2022",
+    title: "Operations & Admin",
     description:
-      "Building end-to-end automation systems and modern web applications using Claude Code, n8n, Next.js, and AI tools. Turning manual bottlenecks into seamless, hands-off systems.",
+      "Executive assistant and operations manager at ConvrtX. Redesigned evaluation and reporting processes, driving 20% efficiency gains. This is where I started asking: how can this be automated?",
+  },
+  {
+    year: "2011 - 2019",
+    title: "BPO Leadership",
+    description:
+      "Progressed from call center agent to training manager across US telecom accounts. Built the operational discipline and process thinking that became the foundation for everything after.",
   },
 ];
 
