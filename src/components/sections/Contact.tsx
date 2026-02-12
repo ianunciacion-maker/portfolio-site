@@ -3,7 +3,7 @@
 import { useState, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { Mail, Phone, Send } from "lucide-react";
+import { Send } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { GlassCard } from "@/components/shared/GlassCard";
 import { SectionHeading } from "@/components/shared/SectionHeading";
@@ -97,26 +97,6 @@ export function Contact() {
                   your operations and scale your business.
                 </p>
 
-                <div className="space-y-4">
-                  <a
-                    href="mailto:ianjoseph.anunciacion@gmail.com"
-                    className="flex items-center gap-3 text-sm text-text-secondary hover:text-text-primary transition-colors"
-                  >
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full glass">
-                      <Mail className="h-4 w-4" />
-                    </div>
-                    ianjoseph.anunciacion@gmail.com
-                  </a>
-                  <a
-                    href="tel:+639184692844"
-                    className="flex items-center gap-3 text-sm text-text-secondary hover:text-text-primary transition-colors"
-                  >
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full glass">
-                      <Phone className="h-4 w-4" />
-                    </div>
-                    +63 918 469 2844
-                  </a>
-                </div>
               </div>
 
               {/* Form / Success */}
