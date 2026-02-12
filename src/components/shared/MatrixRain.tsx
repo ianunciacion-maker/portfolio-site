@@ -5,7 +5,7 @@ import { useReducedMotion } from "motion/react";
 import { useTheme } from "next-themes";
 
 const CHARS =
-  "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン0123456789+-*/<>=~@#$%&";
+  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン+-*/<>=~@#$%&";
 
 interface Drop {
   x: number;
