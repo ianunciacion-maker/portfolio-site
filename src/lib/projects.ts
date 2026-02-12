@@ -79,7 +79,7 @@ Built with **Next.js 16** and **React 19** on the app router. Supabase handles a
       "/images/projects/aia-lead-extractor-5.png",
     ],
     featured: true,
-    order: 3,
+    order: 4,
   },
   {
     slug: "white-lotus",
@@ -113,7 +113,7 @@ Built with **React** and **Vite** for fast dev cycles and optimized builds. **Re
       "/images/projects/white-lotus-5.png",
     ],
     featured: true,
-    order: 4,
+    order: 5,
   },
   {
     slug: "aiauto",
@@ -146,7 +146,7 @@ Built with **vanilla JavaScript** and **Node.js** for maximum performance and ze
       "/images/projects/aiauto-5.png",
     ],
     featured: false,
-    order: 5,
+    order: 6,
   },
   {
     slug: "hr-bot-aia",
@@ -180,7 +180,7 @@ Built with **React** and **Vite** for a snappy single-page experience. The chat 
       "/images/projects/hr-bot-aia-5.png",
     ],
     featured: true,
-    order: 6,
+    order: 7,
   },
   {
     slug: "aia-sales-bot",
@@ -214,7 +214,7 @@ The entire system is orchestrated through **n8n workflows** — no traditional a
       "/images/projects/aia-sales-bot-5.png",
     ],
     featured: true,
-    order: 7,
+    order: 8,
   },
   {
     slug: "rp-partner-website",
@@ -248,7 +248,7 @@ Built with **Next.js 16** and **React 19** on the app router. Remotion handles p
       "/images/projects/rp-partner-website-5.png",
     ],
     featured: true,
-    order: 8,
+    order: 9,
   },
   {
     slug: "autonoiq-website",
@@ -282,7 +282,7 @@ Built with **vanilla JavaScript** — no framework overhead, just clean modular 
       "/images/projects/autonoiq-website-5.png",
     ],
     featured: false,
-    order: 9,
+    order: 10,
   },
   {
     slug: "n8n-tuknang",
@@ -316,7 +316,7 @@ Built entirely in **n8n** with no external application code. The batch generatio
       "/images/projects/n8n-tuknang-5.png",
     ],
     featured: false,
-    order: 10,
+    order: 11,
   },
   {
     slug: "smilevoice-dental",
@@ -363,6 +363,42 @@ The clinic website is built on **Next.js** and **React** with **Tailwind CSS** a
     ],
     featured: true,
     order: 2,
+  },
+  {
+    slug: "clinical-clarity",
+    title: "Clinical Clarity",
+    shortDescription:
+      "Patient portal with a healthcare-inspired design system — therapeutic color palette, precision spacing, and accessibility-first UI for clinical workflows.",
+    fullDescription: `Most patient portals feel like they were designed in 2005 and never updated — clunky interfaces, confusing navigation, and zero attention to the anxiety patients already feel when managing their health. Clinical Clarity is a modern patient portal built from the ground up with a meticulous healthcare-inspired design system that puts clarity, calm, and trust at the center of every interaction.
+
+### Key Features
+
+- **Appointment Management** — Book, reschedule, and cancel appointments with real-time provider availability and automated confirmation emails
+- **Medical Records** — Secure access to lab results, visit summaries, imaging reports, and medication history in a clean, scannable layout
+- **Secure Messaging** — HIPAA-aware message threads between patients and care teams with read receipts and file attachments
+- **Prescription Refills** — One-click refill requests routed to the patient's pharmacy with status tracking from submission to pickup
+- **Billing & Insurance** — Transparent view of charges, insurance claims, and payment history with online bill pay
+
+### Technical Highlights
+
+The design system follows a principle of **therapeutic restraint** — a warm white (#FAFBFC) base with teal (#0D9488, #14B8A6) as the primary accent, used structurally to mark interactive surfaces and pathways rather than decoratively. Spacing uses a consistent 8px grid for harmonic rhythm across every component. Rounded corners, whisper-thin elevation shadows, and deliberate negative space create interfaces that feel simultaneously trustworthy and inviting.
+
+Built on **Next.js** and **React** with **Supabase** handling auth, database, and row-level security for patient data. **Tailwind CSS** powers the custom design token system with semantic color scales calibrated for accessibility contrast ratios. The component library is built for healthcare workflows — form inputs with inline validation, status badges with colorblind-safe palettes, and typography tuned for clinical readability.
+
+**Built with:** Next.js, React, Supabase, Tailwind CSS`,
+    category: "web-apps",
+    categoryLabel: "Web Apps",
+    techStack: ["Next.js", "React", "Supabase", "Tailwind CSS"],
+    image: "/images/projects/clinical-clarity.png",
+    screenshots: [
+      "/images/projects/clinical-clarity-1.png",
+      "/images/projects/clinical-clarity-2.png",
+      "/images/projects/clinical-clarity-3.png",
+      "/images/projects/clinical-clarity-4.png",
+      "/images/projects/clinical-clarity-5.png",
+    ],
+    featured: true,
+    order: 3,
   },
 ];
 
