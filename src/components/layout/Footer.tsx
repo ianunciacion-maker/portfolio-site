@@ -1,10 +1,6 @@
-import { Mail, Phone } from "lucide-react";
 import { SOCIAL_LINKS } from "@/lib/constants";
 
-const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
-  Mail,
-  Phone,
-};
+const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {};
 
 export function Footer() {
   return (

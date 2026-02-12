@@ -16,15 +16,4 @@ export const NAV_ITEMS: NavItem[] = [
   { label: "Contact", href: "#contact" },
 ];
 
-export const SOCIAL_LINKS: SocialLink[] = [
-  {
-    label: "Email",
-    href: "mailto:ianjoseph.anunciacion@gmail.com",
-    icon: "Mail",
-  },
-  {
-    label: "Phone",
-    href: "tel:+639184692844",
-    icon: "Phone",
-  },
-];
+export const SOCIAL_LINKS: SocialLink[] = [];
